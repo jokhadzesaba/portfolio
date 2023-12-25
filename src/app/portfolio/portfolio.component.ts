@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-
+  public imgUrls = ['assets/project3.jpg',
+  'assets/project1.jpg',
+  'assets/project2.jpg',
+  'assets/tic.png']
 }

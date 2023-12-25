@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-
+  public imageUrls =['assets/fbLogo.jpg',
+  'assets/instaLogo.avif',
+  'assets/linkedin.png',]
 }
