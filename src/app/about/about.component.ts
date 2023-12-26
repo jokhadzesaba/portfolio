@@ -11,6 +11,7 @@ export class AboutComponent {
   'assets/email.png',
   'assets/education.png',
   'assets/linkedin.png',
-  'assets/github.png',]
+  'assets/github.png',
+  'assets/image001.png']
 
 }

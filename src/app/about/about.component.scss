@@ -5,6 +5,9 @@
     justify-content: center;
     align-items: center;
     padding: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    
     > .desContainer {
       display: flex;
       flex-direction: column;
@@ -24,6 +27,29 @@
         flex-direction: column;
         height: 200px;
         width: 100%;
+        .data{
+          display: grid;
+          grid-template-rows: repeat(3, 1fr); 
+          grid-template-columns: repeat(2, 1fr);  
+          row-gap: 20px;
+          span{
+            font-size: 20px;
+            color: rgb(85, 139, 141);
+            width: fit-content;
+          }
+          >div{
+            display: flex;
+            align-items: center;
+            >a{
+              margin-left: 5px;
+            }
+          }
+          >div:nth-child(4){
+            >a{
+              width: 170px;
+            }
+          }
+        }
         img {
           width: 40px;
           height: 40px;
@@ -31,8 +57,11 @@
         a {
           text-decoration: none;
         }
+        a:hover{
+          color: rgb(0, 0, 255);
+        }
+
         > p,
-        span,
         a {
           width: 100%;
           color: rgb(85, 139, 141);
@@ -45,44 +74,23 @@
         > p:last-of-type {
           margin-bottom: 40px;
         }
-        > .data {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          gap: 16px;
+      }
+      
+    }
+  }
   
-          > .datacontainer {
+  @media screen and (min-width: 320px) and (max-width: 800px) {
+    .container{
+      height: 700px;
+      >.desContainer{
+        >.description{
+          .data{
             display: flex;
-            gap: 20px;
-            > .single-data:nth-child(1) {
-              margin-right: 320px;
-            }
-            > .single-data {
-              position: relative;
-              > span,
-              a {
-                font-size: 16px;
-                position: absolute;
-                top: 10px;
-                left: 45px;
-                width: 250px;
-              }
-            }
+            flex-direction: column;
+            gap:20px
           }
         }
       }
     }
+    
   }
-  
-  @media screen and (min-width: 320px) and (max-width: 650px) {
-    .data {
-      display: flex;
-      gap: 10px;
-      .datacontainer {
-        display: flex;
-        flex-direction: column;
-      
-      }
-    }
-  }
-  

@@ -1,40 +1,54 @@
 .container {
-    width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  > .infoContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    > .infoContainer {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      gap: 40px;
-      >p{
-          font-size:xx-large;
-          text-decoration: underline;
-          text-underline-offset: 0.2em;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+    > p {
+      font-size: xx-large;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+
+    > .type {
+      a{
+        text-decoration: none;
+        color: blue;
+      }
+      >h2{
+        margin-bottom: 20px;
       }
       > .projects {
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
-        justify-content:space-around;
+        justify-content: space-around;
         .project {
           width: 250px;
-          border: 1px rgb(116, 93, 93) solid;
-          background-color: rgb(173, 204, 194);
+          border: 1px none solid;
+          border-radius: 3px;
+          background-color: rgb(135, 181, 189);
           p {
             font-size: 20px;
             margin-bottom: 10px;
           }
           img {
-            width: 248px;
+            width: 250px;
             height: 300px;
           }
+
           > .buttons {
             display: flex;
             justify-content: space-around;
+            > a:hover {
+              background-color: #064c96;
+            }
             > a {
               text-decoration: none;
               display: flex;
@@ -49,16 +63,38 @@
               border: none;
               font-size: 16px;
             }
-            >a:last-child{
+            > a:last-child {
               margin-bottom: 10px;
             }
           }
         }
       }
     }
-  }
-  @media screen and (min-width: 320px) and (max-width: 650px){
-    .container{
-      margin-top: 260px;
+    .java, .python{
+      >div{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        a{
+          font-size: 20px;
+          word-wrap: break-word;
+        }
+      }
     }
   }
+}
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .container {
+    margin-top: 400px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 700px) {
+  .container {
+    margin-top: 250px;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 800px) {
+  .container {
+    margin-top: 250px;
+  }
+}
