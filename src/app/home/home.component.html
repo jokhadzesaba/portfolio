@@ -1,14 +1,45 @@
-<div class="container">
-    <div>
-      <img
-        [src]="imgUrls[0]"
-        alt="img"
-      />
+
+    <div [ngClass]="(mode.mode| async) ? 'darkMode' : 'container'">
+      <div class="text-icons">
+        <div class="hello">
+          <span>H</span>
+          <span>i</span>
+          <span>,&nbsp;</span>
+          <span>I&nbsp;</span>
+          <span>A</span>
+          <span>m&nbsp;</span>
+          <span>S</span>
+          <span>a</span>
+          <span>B</span>
+          <span>a</span>
+          <span>!</span>
+        </div>
+        <div class="hello">
+            <span>A</span>
+            <span>n</span>
+            <span>g</span>
+            <span>u</span>
+            <span>l</span>
+            <span>a</span>
+            <span>r&nbsp;</span>
+            <span>D</span>
+            <span>e</span>
+            <span>v</span>
+            <span>e</span>
+            <span>l</span>
+            <span>o</span>
+            <span>p</span>
+            <span>e</span>
+            <span>r</span>
+        </div>
+        <div class="contact">
+            <button routerLink="/contact">Contact Me</button>
+            <a href=""><img [src]="imgUrls[2]" alt="img"></a>
+            <a href=""><img [src]="imgUrls[1]" alt="img"></a>
+        </div>
+      </div>
+      <div class="img-container">
+        <img [src]="imgUrls[0]" alt="img" />
+      </div>
     </div>
-    <div>
-      <img [src]="imgUrls[1]" alt="img" />
-      <p>Hi,</p>
-      <p>I Am Saba Jokhadze</p>
-    </div>
-  </div>
-  
+

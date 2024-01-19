@@ -1,0 +1,140 @@
+.modelight{
+    background-color: #B2D2DB;
+  }
+.modedark{
+    background-color: rgb(46,39,39);
+  }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 40px;
+  img {
+    width: 35px;
+    height: 35px;
+  }
+  .info {
+    width: 340px;
+    text-align: center;
+    > .contact {
+      display: flex;
+      align-items: center;
+      gap: 1px;
+      > span {
+        font-size: 50px;
+        color: rgb(5, 61, 87);
+        font-weight: 700;
+        align-self: center;
+        transition: margin 0.3s, color 0.3s;
+        margin-top: 0;
+        &:hover {
+          color: rgb(192, 169, 169);
+          margin-top: -30px;
+        }
+        &:hover + span {
+          margin-top: 0px;
+        }
+      }
+    }
+    > p {
+      font-size: 30px;
+      color: rgb(5, 61, 87);
+    }
+    > p:last-of-type {
+      margin-bottom: 30px;
+    }
+    > .data {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      > .data2 {
+        display: flex;
+        gap: 20px;
+      }
+      .inf {
+        width: 150px;
+        display: flex;
+        border-radius: 18px;
+        align-items: center;
+
+        gap: 10px;
+        background-color: rgb(0, 104, 132);
+
+        > a {
+          color: white;
+          text-decoration: none;
+          font-size: 20px;
+        }
+      }
+      > .inf:first-of-type {
+        width: 320px;
+        
+      }
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 500px){
+  .container{
+    .contact{
+      justify-content: center;
+    }
+    .info{
+      >p{
+        font-size: 20px;
+      }
+      .contact{
+        >span{
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+//   .send-email {
+//     width: 520px;
+//     .info1 {
+//       margin-top: 40px;  
+//       display: grid;
+//       grid-template-columns: repeat(2, 250px);
+//       grid-template-rows: repeat(2, 40px);
+//       gap: 25px;
+//       margin-bottom: 20px;
+//       > input {
+//         border: none;
+//         border-radius: 18px;
+//         &::placeholder {
+//           padding-left: 10px;
+//         }
+//       }
+//     }
+//     .info2 {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       gap: 25px;
+//       > input {
+//         width: 520px;
+//         height: 100px;
+//         border: none;
+//         border-radius: 16px;
+//         position: relative;
+//         &::placeholder {
+//           position: absolute;
+//           top: 10px;
+//           left: 10px;
+//         }
+//       }
+//       > button {
+//         width: 100px;
+//         height: 30px;
+//         border: none;
+//         border-radius: 10px;
+//         cursor: pointer;
+//         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+//           0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//         color: #51788a;
+//       }
+//     }
+//   }
+// }

@@ -1,13 +1,32 @@
-<div class="container">
+<div [ngClass]="(mode.mode | async) ? 'container modedark' : 'container modelight'">
   <div class="infoContainer">
-    <p>Portfolio</p>
+    <div class="text" >
+      <span style="font-size: xx-large;">P</span>
+      <span style="font-size: xx-large;">R</span>
+      <span style="font-size: xx-large;" >O</span>
+      <span style="font-size: xx-large;">J</span>
+      <span style="font-size: xx-large;">E</span>
+      <span style="font-size: xx-large;">C</span>
+      <span style="font-size: xx-large;">T</span>
+      <span style="font-size: xx-large;">S</span>
+    </div>
     <div class="type">
-      <h2>Front-end</h2>
+      <div class="text">
+        <span>F</span>
+        <span>R</span>
+        <span>O</span>
+        <span>N</span>
+        <span>T</span>
+        <span>-</span>
+        <span>E</span>
+        <span>N</span>
+        <span>D</span>
+      </div>
       <div class="projects">
-        <div class="project">
-          <img [src]="imgUrls[0]" alt="img" />
+        <div [ngClass]="(mode.mode | async) ? 'project projectdark' : 'project projectlight'">
+          <img src="assets/pr1.jpg" alt="img" />
           <div>
-            <p>Angular Fitness tracker App</p>
+            <p>Angular Fitness App(responsive)</p>
           </div>
           <div class="buttons">
             <a href="https://github.com/jokhadzesaba/final-project-angular"
@@ -20,8 +39,8 @@
             >
           </div>
         </div>
-        <div class="project">
-          <img [src]="imgUrls[1]" alt="img" />
+        <div [ngClass]="(mode.mode | async) ? 'project projectdark' : 'project projectlight'">
+          <img src="assets/pr2.png" alt="img" />
           <div>
             <p>Html/Css Project</p>
           </div>
@@ -38,10 +57,10 @@
             >
           </div>
         </div>
-        <div class="project">
-          <img [src]="imgUrls[2]" alt="img" />
+        <div [ngClass]="(mode.mode | async) ? 'project projectdark' : 'project projectlight'">
+          <img src="assets/pr3.png" alt="img" />
           <div>
-            <p>Html/Scss Project</p>
+            <p>Html/Scss Project(responsive)</p>
           </div>
           <div class="buttons">
             <a
@@ -56,8 +75,8 @@
             >
           </div>
         </div>
-        <div class="project">
-          <img [src]="imgUrls[3]" alt="" />
+        <div [ngClass]="(mode.mode | async) ? 'project projectdark' : 'project projectlight'">
+          <img src="assets/tictactoe.jpg" alt="img" />
           <div>
             <p>Angular tic-tac-toe</p>
           </div>
@@ -70,7 +89,12 @@
       </div>
     </div>
     <div class="java type">
-      <h2>Java</h2>
+      <div class="text">
+        <span>J</span>
+        <span>A</span>
+        <span>V</span>
+        <span>A</span>
+      </div>
       <div>
         <a href="https://github.com/jokhadzesaba/PinguChat">https://github.com/jokhadzesaba/PinguChat</a>
         <a href="https://github.com/jokhadzesaba/Indexed_Trees">https://github.com/jokhadzesaba/Indexed_Trees</a>
@@ -80,10 +104,37 @@
       </div>
     </div>
     <div class="python type">
-      <h2>Python</h2>
+      <div class="text">
+        <span>P</span>
+        <span>Y</span>
+        <span>T</span>
+        <span>H</span>
+        <span>O</span>
+        <span>N</span>
+      </div>
       <div>
         <a href="https://github.com/jokhadzesaba/hangman-py">https://github.com/jokhadzesaba/hangman-py</a>
         <a href="https://github.com/jokhadzesaba/spotiPy">https://github.com/jokhadzesaba/spotiPy</a>
+        <a href=""></a>
+        <a href=""></a>
+      </div>
+    </div>
+    <div class="js type">
+      <div class="text">
+        <span>J</span>
+        <span>A</span>
+        <span>V</span>
+        <span>A</span>
+        <span>S</span>
+        <span>C</span>
+        <span>R</span>
+        <span>I</span>
+        <span>P</span>
+        <span>T</span>
+      </div>
+      <div>
+        <a href="https://github.com/jokhadzesaba/personal-project-js">https://github.com/jokhadzesaba/personal-project-js(TypeScript version on ts brench)</a>
+        <a href="https://github.com/jokhadzesaba/js-homeworks">https://github.com/jokhadzesaba/js-homeworks(small tasks)</a>
         <a href=""></a>
         <a href=""></a>
       </div>

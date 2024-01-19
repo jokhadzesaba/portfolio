@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    width: 100%;
+    background-color: rgb(195,224,232);
+    color: #fff;
+    border-radius: 2px;
+  }
+  .darkMode{
+    width: 100%;
+    background-color: rgb(24, 21, 21);
+    color: #fff;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .header a {
+    text-decoration: none;
+    color: rgb(27,120,145);
+    margin: 0 15px;
+    font-weight: 700;
+    padding: 15px;
+  }
+  a:hover{
+    background-color: rgb(158, 194, 204);
+  }
+  .container3 {
+    display: flex;
+    align-items: center;
+  }
+  .img-container {
+    margin-left: 10px;
+  }
+  .switch-container {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 26px;
+  }
+  .switch-input {
+    display: none;
+  }
+  .switch-track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .switch-thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+  }
+  .switch-input:checked + .switch-track {
+    background-color: #2196f3;
+  }
+  
+  .switch-input:checked + .switch-track .switch-thumb {
+    transform: translateX(34px);
+  }
+  img{
+    width: 40px;
+    height: 40px;
+  }
+
+  .drop-down{
+    display: none;
+  }
+  .navbar{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 10px;
+    left: -10px;
+    top: 60px;
+  }
+  .navbar > a{
+    padding: 10px;
+    background-color: #82b2da;
+    color: #242121;
+    border-radius: 4px;
+  }
+
+
+  @media screen and (min-width: 320px) and (max-width: 880px){
+    .drop-down{
+      display: block;
+    }
+    .sb{
+      display: none;
+    }
+    .navigation{
+      display: none;
+    }
+
+  }
+  

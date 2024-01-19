@@ -1,0 +1,53 @@
+<div [ngClass]="(mode.mode| async) ? 'container modedark' : 'container modelight'">
+  <div class="info">
+    <div class="contact">
+      <span>C</span>
+      <span>O</span>
+      <span>N</span>
+      <span>T</span>
+      <span>A</span>
+      <span>C</span>
+      <span>T&nbsp;</span>
+      <span>M</span>
+      <span>E</span>
+      <span>!</span>
+    </div>
+    <p>Do you have a job offer?</p>
+    <p>Send a message or call me!</p>
+    <div class="data">
+      <div class="inf">
+        <img [src]="urls[0]" alt="img" />
+        <a href="mailto:saba.joxadze.04@gmail.com">saba.joxadze.04@gmail.com</a>
+      </div>
+      <div class="data2">
+        <div class="inf">
+          <img [src]="urls[2]" alt="img" />
+          <a
+            href="https://www.linkedin.com/in/saba-joxadze-4015b6264/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </div>
+        <div class="inf">
+          <img [src]="urls[1]" alt="img" />
+          <a>555542034</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="send-email">
+    <form [formGroup]="form">
+        <div class="info1">
+            <input formControlName="name" placeholder="Your Name">
+            <input formControlName="email" placeholder="Your email">
+            <input formControlName="subject" placeholder="Subject">
+            <input formControlName="phone" placeholder="Phone(optional)">
+        </div>
+        <div class="info2">
+            <input formControlName="message" placeholder="Enter your Message">
+            <button>Send Email</button>
+        </div>
+    </form>
+
+  </div> -->
+</div>

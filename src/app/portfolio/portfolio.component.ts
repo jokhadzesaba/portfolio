@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SwitchService } from '../switch.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,4 +11,5 @@ export class PortfolioComponent {
   'assets/project1.jpg',
   'assets/project2.jpg',
   'assets/tic.png']
+  constructor(public mode:SwitchService){}
 }

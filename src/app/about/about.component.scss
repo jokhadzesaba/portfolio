@@ -1,6 +1,12 @@
+.modelight{
+  background-color: #B2D2DB;
+}
+.modedark{
+  background-color: rgb(46,39,39);
+}
 .container {
     width: 100%;
-    height: 550px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,20 +18,23 @@
       display: flex;
       flex-direction: column;
       gap: 40px;
-      width: 100%;
-      height: 400px;
+
       > div:first-of-type {
-        > p {
-          color: rgb(26, 24, 24);
+        display: flex;
+        > span {
+          transition: margin 0.3s, color 0.3s;
+          color: #1B9BC6;
           font-size: xx-large;
-          text-decoration: underline;
-          text-underline-offset: 0.2em;
+          &:hover{
+            margin-top: -30px;
+            color: rgb(192, 169, 169);
+          }
         }
       }
       > .description {
         display: flex;
         flex-direction: column;
-        height: 200px;
+        height: 100%;
         width: 100%;
         .data{
           display: grid;
@@ -34,7 +43,7 @@
           row-gap: 20px;
           span{
             font-size: 20px;
-            color: rgb(85, 139, 141);
+            color: #1B9BC6;
             width: fit-content;
           }
           >div{
@@ -64,7 +73,7 @@
         > p,
         a {
           width: 100%;
-          color: rgb(85, 139, 141);
+          color: #1B9BC6;
           font-size: 20px;
         }
         > p:first-of-type {
@@ -81,7 +90,7 @@
   
   @media screen and (min-width: 320px) and (max-width: 800px) {
     .container{
-      height: 700px;
+      height: 100%;
       >.desContainer{
         >.description{
           .data{
