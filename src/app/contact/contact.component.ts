@@ -28,7 +28,25 @@ export class ContactComponent {
   public message = this.form.get('message') as FormControl
 
   sendEmail(){
-
+      let user = {
+        name: this.name.value,
+        email:this.email.value,
+        subject:this.subject.value,
+        message:this.message.value
+      }
+      this.mode.sendEmail("http://localhost:3000/sendmail", user).subscribe(
+        data =>{
+          let res = data
+          console.log(`${user.name} has sand email succesfully`);
+          
+        },
+        err =>{
+          console.log(err);
+          console.log("error is made dude");
+          
+        }
+      )
+      
   }
 }
 
