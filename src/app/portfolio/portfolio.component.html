@@ -40,6 +40,22 @@
           </div>
         </div>
         <div [ngClass]="(mode.mode | async) ? 'project projectdark' : 'project projectlight'">
+          <img src="assets/weather.png" alt="img" />
+          <div>
+            <p>Angular Weather App</p>
+          </div>
+          <div class="buttons">
+            <a href="https://github.com/jokhadzesaba/weatherApp"
+              >Source Code</a
+            >
+            <a
+              href="https://jokhadzesaba.github.io/weatherApp/"
+              target="_blank"
+              >See Project</a
+            >
+          </div>
+        </div>
+        <div [ngClass]="(mode.mode | async) ? 'project projectdark' : 'project projectlight'">
           <img src="assets/pr2.png" alt="img" />
           <div>
             <p>Html/Css Project</p>
