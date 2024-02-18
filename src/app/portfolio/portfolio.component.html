@@ -64,6 +64,24 @@
           </div>
         </div>
         <div
+        [ngClass]="
+          (mode.mode | async) ? 'project projectdark' : 'project projectlight'
+        "
+      >
+        <img src="assets/hangman.png" alt="img" />
+        <div>
+          <p>Angular Hangman Game</p>
+        </div>
+        <div class="buttons">
+          <a href="https://github.com/jokhadzesaba/hangman-angular">Source Code</a>
+          <a
+            href="https://jokhadzesaba.github.io/hangman-angular/"
+            target="_blank"
+            >See Project</a
+          >
+        </div>
+      </div>
+        <div
           [ngClass]="
             (mode.mode | async) ? 'project projectdark' : 'project projectlight'
           "
