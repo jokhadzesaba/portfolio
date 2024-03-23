@@ -8,6 +8,12 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 <style>*{margin:0;padding:0;box-sizing:border-box}body{width:100%;height:100vh}</style><link rel="stylesheet" href="styles.46787ffb63a60b19.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.46787ffb63a60b19.css"></noscript></head>
 <body>
+  <script>
+    if (sessionStorage.redirect) {
+      history.replaceState({}, "", sessionStorage.redirect);
+      delete sessionStorage.redirect;
+    }
+  </script>
   <app-root></app-root>
 <script src="runtime.4780622838e52590.js" type="module"></script><script src="polyfills.ca552c1e6be276d0.js" type="module"></script><script src="main.67f841a8957a2f11.js" type="module"></script></body>
 </html>
