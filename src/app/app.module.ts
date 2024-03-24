@@ -10,7 +10,11 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HeaderComponent } from './header/header.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
-import { CommonModule } from '@angular/common';
+import {
+  CommonModule,
+  HashLocationStrategy,
+  LocationStrategy,
+} from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -23,17 +27,16 @@ import { HttpClientModule } from '@angular/common/http';
     PortfolioComponent,
     HeaderComponent,
     SkillsComponent,
-    ContactComponent
+    ContactComponent,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
-    
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [[{ provide: LocationStrategy, useClass: HashLocationStrategy }]],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
